@@ -1,0 +1,572 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			}
+		],
+		"name": "addOwner",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "p_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "p_type",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "p_code",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "p_production_date",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "p_exp_date",
+				"type": "uint256"
+			}
+		],
+		"name": "AddProduct",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "s_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "s_country",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "s_address",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "s_date",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "r_date",
+				"type": "uint256"
+			}
+		],
+		"name": "AddShipment",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "s_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "p_code",
+				"type": "string"
+			}
+		],
+		"name": "ProductForShipment",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			}
+		],
+		"name": "findOwner",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getProducts",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "product_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "product_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "product_type",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "product_code",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "product_production_date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "product_exp_date",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct counterfeitProduct.Product[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "p_code",
+				"type": "string"
+			}
+		],
+		"name": "getProductShipmentHistory",
+		"outputs": [
+			{
+				"components": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "shipment_name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "shipment_country",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "shipment_address",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "sending_date",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "receiving_date",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct counterfeitProduct.Shipment",
+						"name": "pre_ship_id",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "product_id",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "shipment_name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "shipment_country",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "shipment_address",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "sending_date",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "receiving_date",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct counterfeitProduct.Shipment",
+						"name": "next_ship_id",
+						"type": "tuple"
+					}
+				],
+				"internalType": "struct counterfeitProduct.TraceProduct[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getShipments",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "shipment_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "shipment_country",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "shipment_address",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sending_date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "receiving_date",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct counterfeitProduct.Shipment[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getTraceProducts",
+		"outputs": [
+			{
+				"components": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "shipment_name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "shipment_country",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "shipment_address",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "sending_date",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "receiving_date",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct counterfeitProduct.Shipment",
+						"name": "pre_ship_id",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "product_id",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "shipment_name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "shipment_country",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "shipment_address",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "sending_date",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "receiving_date",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct counterfeitProduct.Shipment",
+						"name": "next_ship_id",
+						"type": "tuple"
+					}
+				],
+				"internalType": "struct counterfeitProduct.TraceProduct[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "product",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "product_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "product_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "product_type",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "product_code",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "product_production_date",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "product_exp_date",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "shipment",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "shipment_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "shipment_country",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "shipment_address",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "sending_date",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "receiving_date",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "traceProduct",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "shipment_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "shipment_country",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "shipment_address",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sending_date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "receiving_date",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct counterfeitProduct.Shipment",
+				"name": "pre_ship_id",
+				"type": "tuple"
+			},
+			{
+				"internalType": "uint256",
+				"name": "product_id",
+				"type": "uint256"
+			},
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "shipment_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "shipment_country",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "shipment_address",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sending_date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "receiving_date",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct counterfeitProduct.Shipment",
+				"name": "next_ship_id",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
