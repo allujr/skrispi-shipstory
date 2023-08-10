@@ -118,13 +118,13 @@ const Shipments = () => {
                             <small className="text-danger">{touched.shipment_name && errors.shipment_name}</small>
                         </FormGroup>
 
-                        <p style={{fontSize:'15px',fontWeight:'bold'}} >Receiver Name :</p>
+                        <p style={{fontSize:'15px',fontWeight:'bold'}} >Country :</p>
                         <FormGroup className='mb-3'>
                             <FormControl
                                 type="text"
                                 name="shipment_country"
                                 id="shipment_country"
-                                placeholder="name"
+                                placeholder="country"
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                             />
