@@ -76,6 +76,7 @@ const AddProductPage = () => {
             <Form onSubmit={handleSubmit}>
                 <Row xs={1} sm={2} lg={3}>
                     <Col>
+                        <p style={{fontSize:'20px',}} >Product Name :</p>
                         <FormGroup className='mb-3'>
                             <FormControl
                                 type="text"
@@ -89,6 +90,7 @@ const AddProductPage = () => {
                         </FormGroup>
                     </Col>
                     <Col>
+                    <p style={{fontSize:'20px',}} >Product Type :</p>
                         <FormGroup className='mb-3'>
                             <FormControl
                                 type="text"
@@ -102,6 +104,7 @@ const AddProductPage = () => {
                         </FormGroup>
                     </Col>
                     <Col>
+                    <p style={{fontSize:'20px',}} >Product Code :</p>
                         <FormGroup className='mb-3'>
                             <FormControl
                                 type="text"
@@ -115,6 +118,7 @@ const AddProductPage = () => {
                         </FormGroup>
                     </Col>
                     <Col>
+                    <p style={{fontSize:'20px',}} >Product Production Date :</p>
                         <FormGroup className='mb-3'>
                             <FormControl
                                 type="date"
@@ -128,6 +132,7 @@ const AddProductPage = () => {
                         </FormGroup>
                     </Col>
                     <Col>
+                    <p style={{fontSize:'20px',}} >Product Expired Date :</p>
                         <FormGroup className='mb-3'>
                             <FormControl
                                 type="date"
