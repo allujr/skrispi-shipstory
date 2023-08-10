@@ -104,7 +104,7 @@ const Shipments = () => {
                     <Modal.Title>Add Shipment</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                <p style={{fontSize:'15px',}} >Shipment Code :</p>
+                <p style={{fontSize:'15px',fontWeight:'bold'}} >Shipment Code :</p>
                     <Form onSubmit={handleSubmit}>
                         <FormGroup className='mb-3'>
                             <FormControl
@@ -118,7 +118,7 @@ const Shipments = () => {
                             <small className="text-danger">{touched.shipment_name && errors.shipment_name}</small>
                         </FormGroup>
 
-                        <p style={{fontSize:'15px',}} >Receiver Name :</p>
+                        <p style={{fontSize:'15px',fontWeight:'bold'}} >Receiver Name :</p>
                         <FormGroup className='mb-3'>
                             <FormControl
                                 type="text"
@@ -130,7 +130,7 @@ const Shipments = () => {
                             />
                             <small className="text-danger">{touched.shipment_country && errors.shipment_country}</small>
                         </FormGroup>
-                        <p style={{fontSize:'15px',}} >Address :</p>
+                        <p style={{fontSize:'15px',fontWeight:'bold'}} >Address :</p>
                         <FormGroup className='mb-3'>
                             <FormControl
                                 type="text"
@@ -142,7 +142,7 @@ const Shipments = () => {
                             />
                             <small className="text-danger">{touched.shipment_address && errors.shipment_address}</small>
                         </FormGroup>
-                        <p style={{fontSize:'15px',}} >Sending Date :</p>
+                        <p style={{fontSize:'15px',fontWeight:'bold'}} >Sending Date :</p>
                         <FormGroup className='mb-3'>
                             <FormControl
                                 type="date"
@@ -154,7 +154,7 @@ const Shipments = () => {
                             />
                             <small className="text-danger">{touched.sending_date && errors.sending_date}</small>
                         </FormGroup>
-                        <p style={{fontSize:'15px',}} >Receiving Date :</p>
+                        <p style={{fontSize:'15px',fontWeight:'bold'}} >Receiving Date :</p>
                         <FormGroup className='mb-3'>
                             <FormControl
                                 type="date"
